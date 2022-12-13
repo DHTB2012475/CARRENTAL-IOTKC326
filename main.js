@@ -275,7 +275,7 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
                 console.log("Document data: ", doc.data());
                 document.getElementById('checkr').innerHTML+=`
                 <hr>
-                <h6>Reservation ID: ${doc.id}</h6>
+                <h6>ID hợp đồng của bạn là: ${doc.id}</h6>
                 <h6>Name: ${doc2.data().name}</h6>
                 <h6>Loại xe: ${doc2.data().type}</h6>
                 <h6>Ngày thuê: ${doc2.data().day} Ngày</h6>
