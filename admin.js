@@ -1,10 +1,10 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyARV7DnYdYyeERtSZWIE3EewJMZxcg4Itg",
-    authDomain: "kc326-3d108.firebaseapp.com",
-    projectId: "kc326-3d108",
-    storageBucket: "kc326-3d108.appspot.com",
-    messagingSenderId: "923442191852",
-    appId: "1:923442191852:web:7346512320f5446673f4c9", 
+  apiKey: "AIzaSyD6HRFXzzpQEy6lZGQiC-6MrmOMEvgvu6s",
+  authDomain: "a3ty-6ec75.firebaseapp.com",
+  projectId: "a3ty-6ec75",
+  storageBucket: "a3ty-6ec75.appspot.com",
+  messagingSenderId: "89457445872",
+  appId: "1:89457445872:web:29ccf135e1e0640f90eb35",
 };
 firebase.initializeApp(firebaseConfig);
 
@@ -18,13 +18,16 @@ firebase.firestore().collection("contact").onSnapshot( (querySnapshot)=>{
       <tr>
       <td>${doc.data().name}</td>
       <td>${doc.data().msg}</td>
+      <td>
+      <button class="btn btn-danger" onclick="deletec1(4,'${doc.id}')" >X</button>
+      </td>
     </tr>
   `
     });
   });
   
   
-//ROOM 1
+// ROOM 1
 firebase.firestore().collection("room1").onSnapshot( (querySnapshot)=>{
     document.getElementById('room1').innerHTML='';
     querySnapshot.forEach((doc)=>{
@@ -110,30 +113,33 @@ firebase.firestore().collection("room4").onSnapshot( (querySnapshot)=>{
       `
     });
   });
-  //ROOM4 END
 
-//   Không nhận xe
 function deletec1(room,id) {
-    console.log(room,id)
-    firebase.firestore().collection(`room${room}`).doc(id).delete().then(function() {
+  console.log(room,id)
+  firebase.firestore().collection(`clients`).doc(id).delete().then(function() {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
         Swal.fire({
-            title: 'Bạn có chắc không nhận hợp đòng thuê xe? ',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: 'Chắn chắc',
-            denyButtonText: `Không`,
-          }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-              Swal.fire('Đã xóa', '', 'success')
-            } else if (result.isDenied) {
-              Swal.fire('Changes are not saved', '', 'info')
-            }
-          })
-    }).catch(()=>{
-    console.log('Lỗi')
-  })
-  }
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    })
+  }).catch(()=>{
+  console.log('Lỗi')
+})
+}
 
 
 //   EndXoas
@@ -147,8 +153,15 @@ firebase.firestore().collection("clients").onSnapshot( (querySnapshot)=>{
       <tr>
       <td>${doc.id}</td>
       <td>${doc.data().name}</td>
-      <td>${doc.data().lastname}</td>
-      <td>${doc.data().email}.00</td>
+      <td>${doc.data().type}</td>
+      <td>${doc.data().day}</td>
+      <td>${doc.data().numberday}</td> 
+      <td>${doc.data().price}</td> 
+      <td>${doc.data().email}</td>
+      <td>${doc.data().phone}</td>
+      <td>
+      <button class="btn btn-danger" onclick="deletec1(4,'${doc.id}')" >X</button>
+      </td>
       </tr>
       `
     });

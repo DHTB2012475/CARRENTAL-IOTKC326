@@ -36,12 +36,12 @@
                     <i class="fas fa-magnifying-glass text-primary"></i>Kiểm tra đặt xe
                 </button>
                 <button type="button" class="btn ml-2 btn-light" data-toggle="modal" data-target="#ModalCancel">
-                    <i class="fas fa-duotone fa-ban text-primary"></i>Hủy đặt xe
+                    <i class="fas fa-duotone fa-ban text-primary "></i>Hủy đặt xe
                 </button>
                 <button type="button" class="btn ml-2 btn-light" data-toggle="modal" data-target="#ModalContact">
-                    <i class="fas fa-phone text-primary"></i>Liên hệ
+                    <i class="fas fa-phone text-primary "></i>Liên hệ
                 </button>
-                <button type="button" class="btn ml-2 btn-light" data-toggle="modal" data-target="#ModalLogin">
+                <button type="button" class="btn ml-2 btn-light " data-toggle="modal" data-target="#ModalLogin">
                     <i class="fas fa-regular fa-user text-primary"></i>Quản trị viên
                 </button>
                
@@ -154,7 +154,7 @@
                                9 chỗ ngồi
                             </div>
                             <p class="cart-text mb-auto">Xe Dcar Ford Limousine X Plus thích hợp cho việc đón khách cho những khách sạn, resort, hoặc đưa đón lãnh đạo, ngoại giao.</p>
-                            <button data-toggle="modal" data-target="#ModalRoom3" style="width: 200px!important;" class="btn btn-primary">
+                            <button data-toggle="modal" data-target="#ModalRoom4" style="width: 200px!important;" class="btn btn-primary">
                                 Thuê 2.500.000đ/Ngày
                             </button>
                         </div>
@@ -170,7 +170,7 @@
 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog" role="document">
         <div class="modal-content" >
-            <div class="modal-header">
+            <div class="modal-header badge badge-pill">
                 <h5 class="modal-title" id="exampleModalLabel">
                     Quản trị viên
                 </h5>
@@ -178,9 +178,9 @@
                     <span aria-hidden="true"> &times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body ">
                 <form id="formadmin">
-                    <div class="form-group">
+                    <div class="form-group badge-pill">
                         <label>ID Quản lý</label>
                         <input type="text" class="form-control" id="adminuser" required>
                     </div>
@@ -188,7 +188,7 @@
                         <label >Mật khẩu</label>
                         <input type="password" class="form-control" id="adminpass" required>
                     </div>
-                    <button type="submit" class="btn-block btn-dark">Đăng nhập</button>
+                    <button type="submit" class="btn-block btn-primary badge-pill">Đăng nhập</button>
                 </form>
 
             </div>
@@ -213,7 +213,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             </div>
             <div class="modal-body">
                 <form id="formcontact">
-                    <div class="form-group">
+                    <div class="form-group badge-pill">
                         <label>Nhập tên của bạn)</label>
                         <input type="text" class="form-control" id="contactName" required>
                     </div>
@@ -221,7 +221,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
                         <label>Để lại câu hỏi và thông tin liên lạc của bạn(Mail, số điện thoại,...)</label>
                         <input type="text" class="form-control" id="contactMessage" required>
                     </div>
-                    <button type="submit" class="btn-block btn-dark">Gửi</button>
+                    <button type="submit" class="btn-block btn-warning badge-pill">Gửi</button>
                 </form>
 
             </div>
@@ -238,7 +238,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-content" >
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    Honda Civic Type R 2023
+                    Honda Civic Type R 2018
                 </h5>
                 <button type="button" class="close"data-dismiss="modal" aria-label="Close" >
                     <span aria-hidden="true">&times;</span>
@@ -251,30 +251,36 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-body">
                 <form id="formroom1">
                     <div class="form-group">
-                        <label>Nhập số điện thoại của bạn</label>
-                        <input type="number" class="form-control" id="room1Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tên</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" id="room1Name" required>
                     </div>
                     <div class="form-group">
-                        <label>Họ</label>
-                        <input type="text" class="form-control" id="room1Lastname" required>
+                        <label>Loại xe</label>
+                        <input disabled type="text" value="Honda Civic Type R 2018 4 chỗ ngồi" class="form-control" id="room1type" required>
                     </div>
-                    <div class="form-group">
-                        <label>Nhập Email</label>
-                        <input type="text" class="form-control" id="room1Email" required>
-                    </div>
-                    
                     <div class="form-group">
                         <label>Ngày thuê</label>
                         <input type="date" class="form-control" id="room1day" required>
                     </div>
                     <div class="form-group">
-                        <label>Giá thuê/ngày</label>
-                        <input disabled type="number" value="500" class="form-control" id="room1Price" required>
+                        <label>Số ngày thuê</label>
+                        <!-- <input type="" class="form-control" id="number1day" required> -->
+                        <input type="number" id="number1day" name="quantity" min="0" max="10" step="1" value="0">
                     </div>
+                    <div class="form-group">
+                        <label>Giá thuê/ngày</label>
+                        <input disabled type="text" value="700.000đ" class="form-control" id="room1Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập Email</label>
+                        <input type="email" class="form-control" id="room1Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập số điện thoại của bạn</label>
+                        <input type="tel" class="form-control" id="room1Phone" required>
+                    </div>
+                   
+                    
                     <button id="btnroom1" type="submit" class="btn-block btn-primary">Thuê</button>
                 </form>
 
@@ -305,29 +311,36 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-body">
                 <form id="formroom2">
                     <div class="form-group">
-                        <label>Nhập số điện thoại của bạn</label>
-                        <input type="number" class="form-control" id="room2Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tên</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" id="room2Name" required>
                     </div>
                     <div class="form-group">
-                        <label>Họ</label>
-                        <input type="text" class="form-control" id="room2Lastname" required>
-                    </div>
-                    <div class="form-group">
-                        <label>E-MAIL</label>
-                        <input type="text" class="form-control" id="room2Email" required>
+                        <label>Loại xe</label>
+                        <input disabled type="text" value="Toyota Vios G 2023 5 chỗ ngồi" class="form-control" id="room2type" required>
                     </div>
                     <div class="form-group">
                         <label>Ngày thuê</label>
                         <input type="date" class="form-control" id="room2day" required>
                     </div>
                     <div class="form-group">
-                        <label>Giá thuê/ngày</label>
-                        <input disabled type="number" value="500" class="form-control" id="room2Price" required>
+                        <label>Số ngày thuê</label>
+                        <!-- <input type="number" class="form-control" id="number2day" required> -->
+                        <input type="number" id="number2day" name="quantity" min="0" max="10" step="1" value="0">
                     </div>
+                    <div class="form-group">
+                        <label>Giá thuê/ngày</label>
+                        <input disabled type="text" value="900.000đ" class="form-control" id="room2Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập Email</label>
+                        <input type="email" class="form-control" id="room2Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập số điện thoại của bạn</label>
+                        <input type="tel" class="form-control" id="room2Phone" required>
+                    </div>
+                   
+                    
                     <button id="btnroom2" type="submit" class="btn-block btn-primary">Thuê</button>
                 </form>
 
@@ -355,29 +368,36 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-body">
                 <form id="formroom3">
                     <div class="form-group">
-                        <label>Nhập số điện thoại của bạn</label>
-                        <input type="number" class="form-control" id="room3Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tên</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" id="room3Name" required>
                     </div>
                     <div class="form-group">
-                        <label>Họ</label>
-                        <input type="text" class="form-control" id="room3Lastname" required>
-                    </div>
-                    <div class="form-group">
-                        <label>E-MAIL</label>
-                        <input type="text" class="form-control" id="room3Email" required>
+                        <label>Loại xe</label>
+                        <input disabled type="text" value="Innova G 2022 7 chỗ ngồi" class="form-control" id="room3type" required>
                     </div>
                     <div class="form-group">
                         <label>Ngày thuê</label>
                         <input type="date" class="form-control" id="room3day" required>
                     </div>
                     <div class="form-group">
-                        <label>Giá thuê/ngày</label>
-                        <input disabled type="number" value="500" class="form-control" id="room3Price" required>
+                        <label>Số ngày thuê</label>
+                        <!-- <input type="number" class="form-control" id="number3day" required> -->
+                        <input type="number" id="number3day" name="quantity" min="0" max="10" step="1" value="0">
                     </div>
+                    <div class="form-group">
+                        <label>Giá thuê/ngày</label>
+                        <input disabled type="text" value="1.200.000đ" class="form-control" id="room3Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập Email</label>
+                        <input type="email" class="form-control" id="room3Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập số điện thoại của bạn</label>
+                        <input type="tel" class="form-control" id="room3Phone" required>
+                    </div>
+                   
+                    
                     <button id="btnroom3" type="submit" class="btn-block btn-primary">Thuê</button>
                 </form>
 
@@ -392,7 +412,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-content" >
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    Dcar Ford Limousine X Plus
+                    Ford Limousine X Plus
                 </h5>
                 <button type="button" class="close"data-dismiss="modal" aria-label="Close" >
                     <span aria-hidden="true">&times;</span>
@@ -405,30 +425,37 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-body">
                 <form id="formroom4">
                     <div class="form-group">
-                        <label>Nhập số điện thoại của bạn</label>
-                        <input type="number" class="form-control" id="room4Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tên</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" id="room4Name" required>
                     </div>
                     <div class="form-group">
-                        <label>Họ</label>
-                        <input type="text" class="form-control" id="room4Lastname" required>
-                    </div>
-                    <div class="form-group">
-                        <label>E-MAIL</label>
-                        <input type="text" class="form-control" id="room4Email" required>
+                        <label>Loại xe</label>
+                        <input disabled type="text" value="Ford Limousine X Plus 9 chỗ ngồi" class="form-control" id="room4type" required>
                     </div>
                     <div class="form-group">
                         <label>Ngày thuê</label>
                         <input type="date" class="form-control" id="room4day" required>
                     </div>
                     <div class="form-group">
-                        <label>Giá thuê/ngày</label>
-                        <input disabled type="number" value="500" class="form-control" id="room4Price" required>
+                        <label>Số ngày thuê</label>
+                        <!-- <input type="number" class="form-control" id="number4day" required> -->
+                        <input type="number" id="number4day" name="quantity" min="0" max="10" step="1" value="0">
                     </div>
-                    <button id="btnroom4" type="submit" class="btn-block btn-primary ">Thuê</button>
+                    <div class="form-group">
+                        <label>Giá thuê/ngày</label>
+                        <input disabled type="text" value="2.500.000đ" class="form-control" id="room4Price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập Email</label>
+                        <input type="text" class="form-control" id="room4Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nhập số điện thoại của bạn</label>
+                        <input type="tel" class="form-control" id="room4Phone" required>
+                    </div>
+                   
+                    
+                    <button id="btnroom4" type="submit" class="btn-block btn-primary">Thuê</button>
                 </form>
 
             </div>
@@ -448,10 +475,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            
             <div class="modal-body">
                 <form id="formcheck">
-                    <div class="form-group badge badge-pill">
+                    <div class="form-group badge-pill">
                         <label>Nhập ID hợp đồng</label>
                         <input type="text" class="form-control" id="checkid" 
                         required>
@@ -472,10 +498,11 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
                     <div id="checkr">
 
                     </div>
-                </div>                  
-                    
-                <button type="submit" class="btn-block btn-dark badge badge-pill">Kiểm tra</button>
-                </form>
+                    <button type="submit" class="btn-block btn-dark badge-pill">Kiểm tra</button>  
+                    </div> 
+                    <!-- <button type="submit" class="btn-block btn-dark">Kiểm tra</button>                  -->
+                <!-- <button type="submit" class="btn-block btn-dark">Kiểm tra</button> -->
+            </form>
 
             </div>
         </div>    
@@ -486,7 +513,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
 <div class="modal fade" id="ModalCancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" >
-            <div class="modal-header">
+            <div class="modal-header badge badge-pill">
                 <h5 class="modal-title" id="exampleModalLabel">
                     HỦY HỢP ĐỒNG
                 </h5>
@@ -496,12 +523,11 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             </div>
             
             <div class="modal-body">
-                <form id="formcancel">
-                    <div class="form-group">
+                <form id="formcancel ">
+                    <div class="form-group badge-pill">
                         <label>Nhập ID hợp đồng</label>
                         <input type="text" class="form-control" id="cancelid" required>
                     </div>
-
                     <div class="form-group">
                         <label for="inputState">Chọn</label>
                         <select required id="roomcancel" class="from-control">
@@ -517,7 +543,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
                     <div id="cancelr">
 
                     </div>
-                    <button type="submit" class="btn-block btn-danger">Cancel</button>
+                    <button type="submit" class="btn-block btn-danger badge-pill">Cancel</button>
                 </form>
 
             </div>

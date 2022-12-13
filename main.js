@@ -14,12 +14,12 @@ var firebaseConfig = {
     // storageBucket: "kc326-46665.appspot.com",
     // messagingSenderId: "1000211689378",
     // appId: "1:1000211689378:web:862f3fbdab1f9fa2040cfb"
-    apiKey: "AIzaSyARV7DnYdYyeERtSZWIE3EewJMZxcg4Itg",
-    authDomain: "kc326-3d108.firebaseapp.com",
-    projectId: "kc326-3d108",
-    storageBucket: "kc326-3d108.appspot.com",
-    messagingSenderId: "923442191852",
-    appId: "1:923442191852:web:7346512320f5446673f4c9",
+    apiKey: "AIzaSyD6HRFXzzpQEy6lZGQiC-6MrmOMEvgvu6s",
+    authDomain: "a3ty-6ec75.firebaseapp.com",
+    projectId: "a3ty-6ec75",
+    storageBucket: "a3ty-6ec75.appspot.com",
+    messagingSenderId: "89457445872",
+    appId: "1:89457445872:web:29ccf135e1e0640f90eb35",
 
   //Điền thông tin Firebase config của cá nhân vào đây
  
@@ -41,17 +41,22 @@ var firestore = firebase.firestore();
 // Bắt đầu xe 1
 document.getElementById('formroom1').addEventListener('submit',(e)=>{
     e.preventDefault();
-    var phone= document.getElementById('room1Phone');
+    var phone = document.getElementById('room1Phone');
+    var numberday= document.getElementById('number1day');
+    var type= document.getElementById('room1type');
     var name= document.getElementById('room1Name');
-    var lastname= document.getElementById('room1Lastname');
     var email= document.getElementById('room1Email');
     var day= document.getElementById('room1day');
     var price= document.getElementById('room1Price');
     document.getElementById("btnroom1").style.visibility = 'hidden';
     firebase.firestore().collection('clients').add({
         name: name.value,
-        lastname: lastname.value,
-        email: email.value
+        email: email.value,
+        type: type.value,
+        day: day.value,
+        numberday: numberday.value,
+        price: price.value,
+        phone: phone.value
 
     })
     .then ((key)=>{
@@ -65,11 +70,11 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
             .then((res)=>{
         Swal.fire({
         icon:'success',
-        title: `Reservation ID: ${res.id}`
+        title: `ID hợp đồng của bạn là: ${res.id}`
     })
                 alert(`Rervation - succes ID:${res.id}` )
+                
                 name.value='';
-                lastname.value='';
                 email.value='';
                 day.value='';
                 document.getElementById('btnroom1').style.visibility = 'visible';
@@ -83,16 +88,22 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
 // Bắt đầu xe 2
 document.getElementById('formroom2').addEventListener('submit',(e)=>{
     e.preventDefault();
+    var phone = document.getElementById('room2Phone');
+    var numberday= document.getElementById('number2day');
+    var type= document.getElementById('room2type');
     var name= document.getElementById('room2Name');
-    var lastname= document.getElementById('room2Lastname');
     var email= document.getElementById('room2Email');
     var day= document.getElementById('room2day');
     var price= document.getElementById('room2Price');
     document.getElementById("btnroom2").style.visibility = 'hidden';
     firebase.firestore().collection('clients').add({
         name: name.value,
-        lastname: lastname.value,
-        email: email.value
+        email: email.value,
+        type: type.value,
+        day: day.value,
+        numberday: numberday.value,
+        price: price.value,
+        phone: phone.value
 
     })
     .then ((key)=>{
@@ -102,17 +113,15 @@ document.getElementById('formroom2').addEventListener('submit',(e)=>{
                 day: day.value,
                 price: price.value,
                 idClient:key.id
-                
-                
             })
             .then((res)=>{
         Swal.fire({
         icon:'success',
-        title: `Reservation ID: ${res.id}`
+        title: `ID hợp đồng của bạn là: ${res.id}`
     })
                 alert(`Rervation - succes ID:${res.id}` )
+                
                 name.value='';
-                lastname.value='';
                 email.value='';
                 day.value='';
                 document.getElementById('btnroom2').style.visibility = 'visible';
@@ -126,16 +135,22 @@ document.getElementById('formroom2').addEventListener('submit',(e)=>{
 // Bắt đầu xe 3
 document.getElementById('formroom3').addEventListener('submit',(e)=>{
     e.preventDefault();
+    var phone = document.getElementById('room3Phone');
+    var numberday= document.getElementById('number3day');
+    var type= document.getElementById('room3type');
     var name= document.getElementById('room3Name');
-    var lastname= document.getElementById('room3Lastname');
     var email= document.getElementById('room3Email');
     var day= document.getElementById('room3day');
     var price= document.getElementById('room3Price');
     document.getElementById("btnroom3").style.visibility = 'hidden';
     firebase.firestore().collection('clients').add({
         name: name.value,
-        lastname: lastname.value,
-        email: email.value
+        email: email.value,
+        type: type.value,
+        day: day.value,
+        numberday: numberday.value,
+        price: price.value,
+        phone: phone.value
 
     })
     .then ((key)=>{
@@ -149,11 +164,11 @@ document.getElementById('formroom3').addEventListener('submit',(e)=>{
             .then((res)=>{
         Swal.fire({
         icon:'success',
-        title: `Reservation ID: ${res.id}`
+        title: `ID hợp đồng của bạn là: ${res.id}`
     })
                 alert(`Rervation - succes ID:${res.id}` )
+                
                 name.value='';
-                lastname.value='';
                 email.value='';
                 day.value='';
                 document.getElementById('btnroom3').style.visibility = 'visible';
@@ -166,16 +181,22 @@ document.getElementById('formroom3').addEventListener('submit',(e)=>{
 // Bắt đầu xe 4
 document.getElementById('formroom4').addEventListener('submit',(e)=>{
     e.preventDefault();
+    var phone = document.getElementById('room4Phone');
+    var numberday= document.getElementById('number4day');
+    var type= document.getElementById('room4type');
     var name= document.getElementById('room4Name');
-    var lastname= document.getElementById('room4Lastname');
     var email= document.getElementById('room4Email');
     var day= document.getElementById('room4day');
     var price= document.getElementById('room4Price');
     document.getElementById("btnroom4").style.visibility = 'hidden';
     firebase.firestore().collection('clients').add({
         name: name.value,
-        lastname: lastname.value,
-        email: email.value
+        email: email.value,
+        type: type.value,
+        day: day.value,
+        numberday: numberday.value,
+        price: price.value,
+        phone: phone.value
 
     })
     .then ((key)=>{
@@ -189,11 +210,11 @@ document.getElementById('formroom4').addEventListener('submit',(e)=>{
             .then((res)=>{
         Swal.fire({
         icon:'success',
-        title: `Reservation ID: ${res.id}`
+        title: `ID hợp đồng của bạn là: ${res.id}`
     })
-                alert(`Rervation - succes ID:${res.id}` )
+                // alert(`Rervation - succes ID:${res.id}` )
+                
                 name.value='';
-                lastname.value='';
                 email.value='';
                 day.value='';
                 document.getElementById('btnroom4').style.visibility = 'visible';
@@ -256,10 +277,12 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
                 <hr>
                 <h6>Reservation ID: ${doc.id}</h6>
                 <h6>Name: ${doc2.data().name}</h6>
-                <h6>Last Name: ${doc2.data().lastname}</h6>
+                <h6>Loại xe: ${doc2.data().type}</h6>
+                <h6>Ngày thuê: ${doc2.data().day} Ngày</h6>
+                <h6>Số ngày thuê: ${doc2.data().numberday}</h6>
+                <h6>Giá thuê/ngày: ${doc2.data().price}</h6>
                 <h6>E-mail: ${doc2.data().email}</h6>
-                <h6>Resarvation Day: ${doc.data().day}</h6>
-                <h6>Price: ${doc.data().price}</h6>
+                <h6>Số điện thoại: ${doc2.data().phone}</h6>
                 `
                 
             })
@@ -283,7 +306,7 @@ document.getElementById('formcancel').addEventListener('submit', (e)=>{
     (function(){
         Swal.fire({
             icon:'success',
-            title: `Đã xóa`
+            title: `Đã yêu cầu hủy chúng tôi sẽ sớm liên hệ với bạn!`
         })
         
         id.value='';

@@ -52,10 +52,13 @@
 #intro {
     width: 500px;
     height: 1000px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
 }
 
 #left {
-    width: 250px;
+    width: 300px;
     height: 1000px;
     background-color: #cbd5f0;
     float: left;
@@ -74,12 +77,13 @@
     float: left;
     margin-top: 70px;
     margin-right: 30px;
+    margin-left: 50px;
     width: auto;
     height: auto;
 }
 
 #left .box .name {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 #left .box h3 {
@@ -93,19 +97,19 @@
 
 #left .box h3:hover {
     background-color: #f8f7f5;
-    color: #cbd5f0;
+    color: #5403d8;
     transition: 1s;
 }
 
 #left .box .quick-menu {
     margin-top: 20px;
-    margin-left: 35px;
+    margin-left: 60px;
     text-align: center;
 }
 
 
 #left .box .quick-menu .item{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-top: 10px;
     text-align: left;
     width: 180px;
@@ -138,7 +142,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #122647;
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
     transform: scaleX(0);
     transform-origin: left;
     transition: 0.5s;
@@ -153,7 +157,7 @@
 }
 
 .box ul li:hover span{
-    color: #1bfaad;
+    color: #f8f7f5;
 }
 
 #right { 
@@ -161,8 +165,8 @@
     width: 900px;
     height: 1000px;
     margin-top: 100px;
-    margin-left: 300px;
-
+    margin-left: 400px;
+    padding-right: 30px;
     float: left;
     font-size: 20px;
     color: #122647;
@@ -172,7 +176,4 @@
    color: #122647;
 }
 
-#right h1:hover {
-    color: #1bfaad;
-    transition: 0.5s;
-}
+
