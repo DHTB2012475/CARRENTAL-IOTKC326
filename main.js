@@ -72,7 +72,7 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
                     icon:'success',
                     title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
     })
-                alert(`Rervation - succes ID:${res.id}` )
+                // alert(`Rervation - succes ID:${res.id}` )
                 
                 name.value='';
                 email.value='';
