@@ -68,9 +68,9 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
                 idClient:key.id
             })
             .then((res)=>{
-        Swal.fire({
-        icon:'success',
-        title: `ID hợp đồng của bạn là: ${res.id}`
+                Swal.fire({
+                    icon:'success',
+                    title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
     })
                 alert(`Rervation - succes ID:${res.id}` )
                 
@@ -117,9 +117,9 @@ document.getElementById('formroom2').addEventListener('submit',(e)=>{
             .then((res)=>{
         Swal.fire({
         icon:'success',
-        title: `ID hợp đồng của bạn là: ${res.id}`
+        title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
     })
-                alert(`Rervation - succes ID:${res.id}` )
+                // alert(`Rervation - succes ID:${res.id}` )
                 
                 name.value='';
                 email.value='';
@@ -162,12 +162,11 @@ document.getElementById('formroom3').addEventListener('submit',(e)=>{
                 idClient:key.id
             })
             .then((res)=>{
-        Swal.fire({
-        icon:'success',
-        title: `ID hợp đồng của bạn là: ${res.id}`
+                Swal.fire({
+                    icon:'success',
+                    title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
     })
-                alert(`Rervation - succes ID:${res.id}` )
-                
+                // alert(`Rervation - succes ID:${res.id}` )
                 name.value='';
                 email.value='';
                 day.value='';
@@ -208,9 +207,9 @@ document.getElementById('formroom4').addEventListener('submit',(e)=>{
                 idClient:key.id
             })
             .then((res)=>{
-        Swal.fire({
-        icon:'success',
-        title: `ID hợp đồng của bạn là: ${res.id}`
+                Swal.fire({
+                    icon:'success',
+                    title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
     })
                 // alert(`Rervation - succes ID:${res.id}` )
                 
@@ -232,7 +231,7 @@ document.getElementById('formadmin').addEventListener('submit', (e)=>{
     var user = document.getElementById('adminuser');
     var pass = document.getElementById('adminpass');
     if (user.value == 'a3ty' && pass.value =='a3ty') {
-        window.location.href= "admin.html";
+        window.location.href= "thongtinhopdong.html";
     }
 
 });
