@@ -240,9 +240,12 @@ document.getElementById('formadmin').addEventListener('submit', (e)=>{
 document.getElementById('formcontact').addEventListener('submit', (e)=>{e.preventDefault();
     var user = document.getElementById('contactName');
     var msg = document.getElementById('contactMessage');
+    var info = document.getElementById('contactinfo');
+
     firebase.firestore().collection("contact").add({
         name: user.value,
-        msg: msg.value
+        msg: msg.value,
+        info: info.value
     })
     .then(function(docRef){
         Swal.fire({
@@ -253,7 +256,8 @@ document.getElementById('formcontact').addEventListener('submit', (e)=>{e.preven
             $('#ModalContact').modal('toggle');
         });
         user.value='';
-        msg.value="";
+        msg.value=""
+        info.value='';
     })
     .catch(function(error){
         console.error("Tin nhắn bị lỗi:",error);
@@ -273,6 +277,7 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
         if (doc.exists ) {
             firebase.firestore().collection(`clients`).doc(doc.data().idClient).get().then((doc2) =>{
                 console.log("Document data: ", doc.data());
+                var total = Number(doc2.data().price.replace(/[.]/,",").replace(/[^0-9]+/g,""))*doc2.data().numberday;
                 document.getElementById('checkr').innerHTML+=`
                 <hr>
                 <h6>ID hợp đồng của bạn là: ${doc.id}</h6>
@@ -281,8 +286,10 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
                 <h6>Ngày thuê: ${doc2.data().day} Ngày</h6>
                 <h6>Số ngày thuê: ${doc2.data().numberday}</h6>
                 <h6>Giá thuê/ngày: ${doc2.data().price}</h6>
+                <h6>Tổng giá thuê: ${numberWithCommas(total)}</h6>
                 <h6>E-mail: ${doc2.data().email}</h6>
                 <h6>Số điện thoại: ${doc2.data().phone}</h6>
+              
                 `
                 
             })
@@ -294,6 +301,10 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
     console.log("Error");
 });
 });
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+  }
 
 //form cancel
 document.getElementById('formcancel').addEventListener('submit', (e)=>{
