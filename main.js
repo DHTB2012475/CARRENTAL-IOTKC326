@@ -1,42 +1,20 @@
-// // Import the functions you need from the SDKs you need
 
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
-// import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-// import { getFirestore, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-// // Your web app's Firebase configuration
 var firebaseConfig = {
-    // apiKey: "AIzaSyAl9bfYYylB4VBRBJw-xwuQrbHWilm0yG4",
-    // authDomain: "kc326-46665.firebaseapp.com",
-    // databaseURL: "https://kc326-46665-default-rtdb.firebaseio.com",
-    // projectId: "kc326-46665",
-    // storageBucket: "kc326-46665.appspot.com",
-    // messagingSenderId: "1000211689378",
-    // appId: "1:1000211689378:web:862f3fbdab1f9fa2040cfb"
-    apiKey: "AIzaSyD6HRFXzzpQEy6lZGQiC-6MrmOMEvgvu6s",
-    authDomain: "a3ty-6ec75.firebaseapp.com",
-    projectId: "a3ty-6ec75",
-    storageBucket: "a3ty-6ec75.appspot.com",
-    messagingSenderId: "89457445872",
-    appId: "1:89457445872:web:29ccf135e1e0640f90eb35",
+
+    apiKey: "AIzaSyD9aNoLr9opPO6cs5C-C1vIaGNiZyLbZPA",
+    authDomain: "iotvd-15d21.firebaseapp.com",
+    projectId: "iotvd-15d21",
+    storageBucket: "iotvd-15d21.appspot.com",
+    messagingSenderId: "943467542646",
+    appId: "1:943467542646:web:2901231e81ed9ac22a4757",
 
   //Điền thông tin Firebase config của cá nhân vào đây
  
 };
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
 
-//resevation room 1
-// onAuthStateChanged(auth, user => {
-//     if(user != null) {
-//         console.log('logged in!');
-//     } else {
-//          console.log('No user');
-//     }
-//  })
 
 // Bắt đầu xe 1
 document.getElementById('formroom1').addEventListener('submit',(e)=>{

@@ -1,10 +1,10 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyD6HRFXzzpQEy6lZGQiC-6MrmOMEvgvu6s",
-  authDomain: "a3ty-6ec75.firebaseapp.com",
-  projectId: "a3ty-6ec75",
-  storageBucket: "a3ty-6ec75.appspot.com",
-  messagingSenderId: "89457445872",
-  appId: "1:89457445872:web:29ccf135e1e0640f90eb35",
+  apiKey: "AIzaSyD9aNoLr9opPO6cs5C-C1vIaGNiZyLbZPA",
+  authDomain: "iotvd-15d21.firebaseapp.com",
+  projectId: "iotvd-15d21",
+  storageBucket: "iotvd-15d21.appspot.com",
+  messagingSenderId: "943467542646",
+  appId: "1:943467542646:web:2901231e81ed9ac22a4757",
 };
 firebase.initializeApp(firebaseConfig);
 
