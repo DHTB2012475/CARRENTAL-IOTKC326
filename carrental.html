@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="./img/logoooo.png">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script src="mail.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("8-P8BBr29uFCkGZ23");
+   })();
+</script>
   
 
     
@@ -256,7 +266,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
             
             <div class="modal-body ">
                 <form id="formroom1">
-                    <form action="https://formsubmit.co/el/mutuyu" method="POST">
+                    
                     <div class="form-group">
                         <label>Họ và tên</label>
                         <input type="text" class="form-control" id="room1Name" required>
@@ -288,8 +298,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true" >
                     </div>
                    
                     
-                    <button id="btnroom1" type="submit" class="btn-block btn-primary">Thuê</button>
-                </form>
+                    <button id="btnroom1" type="submit" class="btn-block btn-primary" onclick="sendMail()">Submit</button>
+                    <!-- <button class="btn btn-primary" onclick="sendMail()">Submit</button> -->
+                
             </form>
 
             </div>
