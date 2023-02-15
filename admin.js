@@ -54,7 +54,7 @@ firebase.firestore().collection("clients").onSnapshot( (querySnapshot)=>{
   });
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ";
 }
 //Xóa thông tin hợp đồng
 function deletec1(room,id) {
