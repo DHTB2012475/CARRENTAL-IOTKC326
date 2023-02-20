@@ -57,6 +57,21 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ";
 }
 //Xóa thông tin hợp đồng
+// function deletec1(room,id) {
+//   console.log(room,id)
+//   firebase.firestore().collection(`clients`).doc(id).delete().then(function() {
+//     Swal.fire({
+//       icon:'success',
+//       title: `Đã xóa hợp đồng`
+//   }).then((result) => {
+//       if (result) {
+       
+//       }
+//     })
+//   }).catch(()=>{
+//   console.log('Lỗi')
+// })
+// }
 function deletec1(room,id) {
   console.log(room,id)
   firebase.firestore().collection(`clients`).doc(id).delete().then(function() {
