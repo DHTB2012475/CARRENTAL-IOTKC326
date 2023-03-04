@@ -34,8 +34,8 @@ function sendMail() {
       document.getElementById("number1day").value = "";
       total="";
       // document.numberWithCommas(total);
-      console.log(res);
-      alert("Your message sent successfully!!")
+      // console.log(res);
+      // alert("Your message sent successfully!!")
 
     })
     .catch(err => console.log(err));
