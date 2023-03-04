@@ -48,7 +48,7 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
             .then((res)=>{
                 Swal.fire({
                     icon:'success',
-                    title: `Hợp đồng được tạo thành công <br> ID hợp đồng của bạn là: ${res.id}`
+                    title: `Thông tin yêu cầu đã gửi qua mail, thay đổi thông tin hoặc hủy yêu cầu bằng mã này(Trước 15p khi chúng tôi liên hệ voi): ${res.id}`
     })
                 // alert(`Rervation - succes ID:${res.id}` )
                 
