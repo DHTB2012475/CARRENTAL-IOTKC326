@@ -48,7 +48,11 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
             .then((res)=>{
                 Swal.fire({
                     icon:'success',
+<<<<<<< HEAD
                     title: `Thông tin yêu cầu đã gửi qua mail, bạn có thể kiểm tra trên thông tin trên Wed bằng mã này: ${res.id}`
+=======
+                    title: `Thông tin yêu cầu đã gửi qua mail, thay đổi thông tin hoặc hủy yêu cầu bằng mã này(Trước 15p khi chúng tôi liên hệ voi): ${res.id}`
+>>>>>>> parent of 4031b79 (Update main.js)
     })
                 // alert(`Rervation - succes ID:${res.id}` )
                 
