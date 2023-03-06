@@ -48,7 +48,7 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
             .then((res)=>{
                 Swal.fire({
                     icon:'success',
-                    title: `Thông tin yêu cầu đã gửi qua mail, thay đổi thông tin hoặc hủy yêu cầu bằng mã này: ${res.id}`
+                    title: `Thông tin yêu cầu đã gửi qua mail, bạn có thể kiểm tra trên thông tin trên Wed bằng mã này: ${res.id}`
     })
                 // alert(`Rervation - succes ID:${res.id}` )
                 
