@@ -17,17 +17,20 @@ var firestore = firebase.firestore();
 
 
 // Bắt đầu xe 1
-document.getElementById('formroom1').addEventListener('submit',(e)=>{
+document.getElementById('formcar1').addEventListener('submit',(e)=>{
     e.preventDefault();
-    var phone = document.getElementById('room1Phone');
-    var numberday= document.getElementById('number1day');
-    var type= document.getElementById('room1type');
-    var name= document.getElementById('room1Name');
-    var email= document.getElementById('room1Email');
-    var day= document.getElementById('room1day');
+    var phone = document.getElementById('car1Phone');
+    var numberday= document.getElementById('car1day');
+    var type= document.getElementById('car1type');
+    var name= document.getElementById('car1Name');
+    var email= document.getElementById('car1Email');
+    var day= document.getElementById('carday');
     var price= document.getElementById('room1Price');
-    document.getElementById("btnroom1").style.visibility = 'hidden';
-    firebase.firestore().collection('clients').add({
+    document.getElementById("btncar1").style.visibility = 'hidden';
+    firebase.firestore().collection
+
+
+
         name: name.value,
         email: email.value,
         type: type.value,
@@ -40,7 +43,7 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
     .then ((key)=>{
         firebase.firestore().collection('clients').doc(key.id).update({id:key.id})
         .then(()=>{
-            firebase.firestore().collection('room1').add({
+            firebase.firestore().collection('car1').add({
                 day: day.value,
                 price: price.value,
                 idClient:key.id
@@ -48,7 +51,7 @@ document.getElementById('formroom1').addEventListener('submit',(e)=>{
             .then((res)=>{
                 Swal.fire({
                     icon:'success',
-                    title: `Thông tin yêu cầu đã gửi qua mail, thay đổi thông tin hoặc hủy yêu cầu bằng mã này: ${res.id}`
+                    title: `Bạn có thể xem thông tin đã yêu cầu qua mail hoặc kiểm tra bằng mã nay: ${res.id}`
     })
                 // alert(`Rervation - succes ID:${res.id}` )
                 
