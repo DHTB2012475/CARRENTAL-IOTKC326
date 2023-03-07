@@ -262,7 +262,7 @@ document.getElementById('formcheck').addEventListener('submit', (e)=>{
                 <h6>ID hợp đồng của bạn là: ${doc.id}</h6>
                 <h6>Name: ${doc2.data().name}</h6>
                 <h6>Loại xe: ${doc2.data().type}</h6>
-                <h6>Ngày thuê: ${doc2.data().day} Ngày</h6>
+                <h6>Ngày thuê: ${doc2.data().day}</h6>
                 <h6>Số ngày thuê: ${doc2.data().numberday}</h6>
                 <h6>Giá thuê/ngày: ${doc2.data().price}</h6>
                 <h6>Tổng giá thuê: ${numberWithCommas(total)}</h6>
